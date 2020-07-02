@@ -1,3 +1,89 @@
+
+
 * {
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.header {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content:  start;
+    top: 0px;
+    width: 70px;
+    height: 100vh;
+    background: linear-gradient(#FA7559, #FD5272);
+}
+
+.logo {
+    width: 100%;
+    min-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: #FA7559;
+    background: #ffffff;
+    box-shadow:  0 1px  3px 3px rgba(0, 0, 0, .2);
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    margin-top: 40px;   
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.home {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    background: url(../dist/img/header-pic/home.png) no-repeat center;
+}
+
+.stactics {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    background: url(../dist/img/header-pic/stactics.png) no-repeat center;
+}
+
+.users {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    background: url(../dist/img/header-pic/users.png) no-repeat center;
+}
+
+.settings {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    background: url(../dist/img/header-pic/settings.png) no-repeat center;
+}
+
+.quires {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    background: url(../dist/img/header-pic/quires.png) no-repeat center;
+}
+
+.output {
+    justify-self: start; 
+    width: 100%;
+    min-height: 50px;
+    background: url(../dist/img/header-pic/output.png) no-repeat center;
 }
