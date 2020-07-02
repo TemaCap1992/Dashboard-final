@@ -9,6 +9,10 @@
     display: flex;
 }
 
+
+/* header
+=================================*/
+
 .header {
     position: sticky;
     display: flex;
@@ -32,7 +36,7 @@
 
 .menu {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 a {
@@ -87,3 +91,52 @@ a {
     min-height: 50px;
     background: url(../dist/img/header-pic/output.png) no-repeat center;
 }
+
+
+/* main
+=================================*/
+
+.main {
+    width: 95%;
+    background: linear-gradient(#255559, #105152);
+}
+
+.top {
+    width: 100%;
+    background: #ffffff;
+}
+
+.first-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    border-bottom: 1px solid lightgrey;
+    
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    background: burlywood;
+    border: 1px solid red;
+}
+
+.last-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.price {
+    width: 70px;
+    height: 70px;
+    background: burlywood;
+    border: 2px solid red;
+}
+
+
+
