@@ -6,6 +6,9 @@
     .right-side {
         width: 50%;
     }
+    .last-top {
+        justify-content: center;
+    }
 
 }
     
@@ -45,6 +48,7 @@
 *:after {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 .wrapper {
@@ -87,6 +91,7 @@ a {
     margin: 40px auto 0;   
     text-decoration: none;
     color: #ffffff;
+    font-size: 10px;
 }
 
 
@@ -139,8 +144,6 @@ a {
     border: 10px solid transparent; 
     border-left: 10px solid #FA7559;
 }
-
-
 
 .home {
     display: flex;
@@ -213,6 +216,8 @@ a {
 
 .left-side {
     display: flex;
+    justify-content: space-between;
+    width: 50%;
    
 }
 
@@ -225,10 +230,10 @@ a {
 
 .search {
     display: flex;
-    width: 50%;
+    width: 40%;
     max-height: 35px;
     padding-top: 20px;
- 
+
 }
 
 .search input {
@@ -236,6 +241,8 @@ a {
     min-height: 30px;
     border-radius: 50px;
     border: 1px solid #BFBFBF;
+    font-size: 12px;
+    color: #C8C8C8;
     background-position: right;
     background-image: url(../dist/img/main-pic/top/zoom.png);
     background-repeat: no-repeat;
@@ -298,6 +305,8 @@ button {
 
 .right-side {
     display: flex;
+    justify-content: flex-end;
+    width: 50%;
 }
 
 .right-buttons {
@@ -320,9 +329,20 @@ button {
     display: flex;
     width: 50%;
     text-align: center;
-    
 }
 
+.avatar h2 {
+    font-size: 14px;
+    background: linear-gradient(to right, #FD5272, #FB7858);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #FA7559;
+}
+
+.avatar h4 {
+    font-size: 10px;
+    color: #BFBFBF;
+}
 .avatar .point {
     background: #BFBFBF;
     margin: 25px auto 0;
@@ -354,7 +374,7 @@ button {
 .last-top {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 }
@@ -367,33 +387,122 @@ button {
     height: 100px;
     margin: 15px 15px 15px 0;
     text-align: center;
-    
+}
+
+.price h2 {
+    font-size: 20px;
+    background: linear-gradient(to right, #FD5272, #FB7858);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #FA7559;
 }
 
 .price h4 {
     font-size: 12px;
 }
 
+.price:nth-child(8) {
+    h2 {
+        font-size: 12px;
+    }
+} 
+
+.price h5 {
+    font-size: 12px;
+    color: #C8C8C8;
+}
 /* bottom
 ===================*/
 
+
 .bottom {
     display: flex;
+    flex-wrap: wrap;
 }
+
 .content {
     width: 75%;
-    background: burlywood;
 }
+
+
+
+
+
+
 
 .top-content {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 250px;
+    display: flex;
+
 }
 
-.bottom-content {
+.bottom-content{
     width: 100%;
-    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.left-bottom-content {
+    width: 50%;
+}
+
+.right-bottom-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.square {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%; 
+}
+
+.graphs {
+    width: 75%;
+    min-height: calc(100px + 10vw);
+    
+    background: darkgreen;
+}
+
+.feed {
+    width: 25%;
+    min-height: calc(100px + 10vw);
+    background: green;
+    
+}
+.income {
+    width: 100%;
+    min-height: 100%;
+    background: rgb(33, 204, 33);
+}
+.task {
+    
+    width: 100%;
+    min-height: calc(100px + 10vw);
+    background: rgb(15, 43, 15);
+}
+.progress {
+   
+    width: 50%;
+    min-height: calc(100px + 10vw);
+    background: rgb(71, 248, 71);
+}
+.shipments {
+    
+    width: 50%;
+    min-height: calc(100px + 10vw);
+    background: rgb(8, 117, 8);
+}
+
+
+
+
+/* aside
+============================*/
 
 .aside {
     width: 25%;
@@ -441,6 +550,15 @@ button {
     display: flex;
     justify-content: space-around;
     width: 90%;
+}
+
+.people h4 {
+    font-size: 13px;
+}
+
+.people h5 {
+    font-size: 10px;
+    color: #C8C8C8;
 }
 
 .line {
@@ -520,13 +638,14 @@ button {
     max-height: 35px;
     padding-top: 30px;
     padding-bottom: 30px;
- 
 }
 
 .search-aside input {
     width: 100%;
     min-height: 30px;
     border: none;
+    font-size: 10px;
+    color: #C8C8C8;
     border-bottom: 1px solid #BFBFBF;
     background-image: transparent;
 }
@@ -535,7 +654,8 @@ button {
 
 
 
-
+/* footer
+===================*/
 
 footer {
     width: 100%;
@@ -543,6 +663,7 @@ footer {
 
 }
 footer h4 {
+    font-size: 14px;
     text-align: center;
     margin: 25px auto;
     
@@ -554,7 +675,7 @@ footer h4 {
 }
 
 .links {
-    margin: 15px;
+    margin: 0.75vw;
     width: 55px;
     height: 55px;
     border-radius: 20px;
