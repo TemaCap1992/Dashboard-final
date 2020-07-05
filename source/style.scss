@@ -9,7 +9,6 @@
     .last-top {
         justify-content: center;
     }
-
 }
     
     @media screen and (max-width: 767px) {
@@ -23,8 +22,7 @@
     }   
     .right-side {
         width: 90%;
-        justify-content: space-around;
-    
+        justify-content: space-around;    
     }   
     .bottom {
         display: flex;
@@ -36,21 +34,18 @@
     .aside {
         width: 100%;
     }
-
 }
     
-    @media screen and (max-width: 479px) {
+@media screen and (max-width: 479px) {
     /* стили для телефонов - начало */
     .left-side {
         flex-direction: column-reverse;
-        align-items: center;
-        
+        align-items: center;   
     }   
     .right-side {
         flex-direction: column;
         align-items: center;
     }
-
     .top-content {
         display: flex;
         flex-direction: column;
@@ -115,7 +110,6 @@ a {
     color: #ffffff;
     font-size: 10px;
 }
-
 
 .home::before {
     content: ''; 
@@ -220,12 +214,10 @@ a {
 
 .main {
     width: 95%;
-    background: linear-gradient(#255559, #105152);
 }
 
 .top {
     width: 100%;
-    background: #ffffff;
 }
 
 .first-top {
@@ -239,23 +231,19 @@ a {
 .left-side {
     display: flex;
     justify-content: space-between;
-    width: 50%;
-   
+    width: 50%;   
 }
 
 .left-buttons {
     width: 210px;
     display: flex;
-
 }
-
 
 .search {
     display: flex;
     width: 40%;
     max-height: 35px;
     padding-top: 20px;
-
 }
 
 .search input {
@@ -270,7 +258,7 @@ a {
     background-repeat: no-repeat;
 }
 
-button {
+button, .button {
     width: 70px;
     height: 70px;
     background: #ffffff;
@@ -279,7 +267,8 @@ button {
 
 .more {
     position: relative;
-    left: 10px;
+    left: 17px;
+    top: 26px;
     width: 36px;
     height: 18px;
     border-radius: 50px;
@@ -324,7 +313,6 @@ button {
     background: url(../dist/img/main-pic/top/settings-menu.png) no-repeat center;
 }
 
-
 .right-side {
     display: flex;
     justify-content: flex-end;
@@ -335,6 +323,7 @@ button {
     display: flex;
     width: 210px;
 }
+
 .right-buttons button:nth-child(1) {
     background: url(../dist/img/main-pic/top/upload.png) no-repeat center;
 }
@@ -366,23 +355,23 @@ button {
     font-size: 10px;
     color: #BFBFBF;
 }
+
 .avatar .point {
-    background: #BFBFBF;
     margin: -10px auto 0;
     left: 0;
-
+    background: #BFBFBF;
 }
 
 .avatar .point::before {
-    background: #BFBFBF;
     left: 0;
     top: -10px;
+    background: #BFBFBF;
 }
 
 .avatar .point::after {
-    background: #BFBFBF;
     left: 0;
     top: 10px;
+    background: #BFBFBF;
 }
 
 .avatar button {
@@ -390,10 +379,8 @@ button {
     background: url(../dist/img/main-pic/top/avatar.png) no-repeat center;
 }
 
-
 /* .last-top
 ==========================*/
-
 
 .last-top {
     display: flex;
@@ -415,10 +402,10 @@ button {
 
 .price h2 {
     font-size: 20px;
-    background: linear-gradient(to right, #FD5272, #FB7858);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #FA7559;
+    background: linear-gradient(to right, #FD5272, #FB7858);
 }
 
 .price h4 {
@@ -435,9 +422,9 @@ button {
     font-size: 12px;
     color: #C8C8C8;
 }
-/* bottom
-===================*/
 
+/* bottom
+===============================================================*/
 
 .bottom {
     display: flex;
@@ -448,24 +435,17 @@ button {
     width: 75%;
 }
 
-
-
-
-
-
-
 .top-content {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     display: flex;
-
+    width: 100%;
 }
 
 .bottom-content{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .left-bottom-content {
@@ -486,10 +466,86 @@ button {
 }
 
 .graphs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 75%;
     min-height: calc(100px + 10vw);
-    
-    background: darkgreen;
+}
+
+.top-graphs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+}
+
+.right-top-graphs {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.right-top-graphs .point {
+    background: #BFBFBF;
+}
+
+.right-top-graphs .point::before {
+    left: 0;
+    top: 10px;
+    background: #BFBFBF;
+}
+
+.right-top-graphs .point::after {
+    left: 0;
+    top: -10px;
+    background: #BFBFBF;
+}
+
+.bottom-graphs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding-top: 30px;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.level {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.level .line {
+    position: relative;
+    width: 500px;
+    height: 2px;
+}
+
+.blue {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+}
+
+.violet {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+}
+
+.orange {
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
 .feed {
@@ -509,16 +565,17 @@ button {
 
 .feed h2 {
     font-size: 20px;
-    background: linear-gradient(to right, #708AE6, #844BB6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #844BB6;
+    background: linear-gradient(to right, #708AE6, #844BB6);
 }
 
 .feed h5 {
     font-size: 12px;
     color: #C8C8C8;
 }
+
 .feed-pic {
     display: flex;
     width: 110px;
@@ -527,9 +584,11 @@ button {
     background: url(../dist/img/main-pic/bottom/content/circle.png);
 }
 
+/* income
+==========================================*/
+
 .income {
     width: 100%;
-    height: 455px;
     font-size: 12px;
     color: #C8C8C8;
     background: #ffffff;    
@@ -539,6 +598,7 @@ button {
     padding: 10px;
     margin-bottom: 25px;
 }
+
 .content-income {
     width: 100%;
     display: flex;
@@ -554,10 +614,12 @@ button {
     min-height: 275px;
     text-align: center; 
 }
+
 .right-text {
     display: flex;
     flex-direction: column;
 }
+
 .text-income h4 {
     width: 95%;
     border: 1px solid #C8C8C8;
@@ -580,6 +642,7 @@ button {
     text-align: center;
     background: url(../dist/img/main-pic/bottom/content/quill.png) no-repeat center;
 }
+
 .income .line {
     width: 2px;
     height: 160px;
@@ -587,6 +650,8 @@ button {
     background: #C8C8C8;
 }
 
+/* progress
+===============================*/
 
 .progress {
     display: flex;
@@ -605,20 +670,22 @@ button {
 
 .progress h2 {
     font-size: 20px;
-    background: linear-gradient(to right, #708AE6, #844BB6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #844BB6;
+    background: linear-gradient(to right, #708AE6, #844BB6);
 }
 
 .progress h5 {
     font-size: 12px;
     color: #C8C8C8;
 }
+
 .progress-pic {
     display: flex;
     margin: 5px;
 }
+
 .lines {
     display: flex;
     align-items: flex-end;
@@ -654,7 +721,6 @@ button {
     }
 }
 
-
 .shipments {
     display: flex;
     flex-wrap: wrap;
@@ -674,10 +740,10 @@ button {
 .shipments h2 {
     width: 30%;
     font-size: 20px;
-    background: linear-gradient(to right, #708AE6, #844BB6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #844BB6;
+    background: linear-gradient(to right, #708AE6, #844BB6);
 }
 
 .shipments h5 {
@@ -685,6 +751,7 @@ button {
     font-size: 12px;
     color: #C8C8C8;
 }
+
 .shipments-pic {
     width: 190px;
     min-height: 100px;
@@ -692,13 +759,6 @@ button {
     margin: -5px;
     background: url(../dist/img/main-pic/bottom/content/map.png) no-repeat center;
 }
-
-
-
-
-
-
-
 
 .bottom-text{
     display: flex;
@@ -714,8 +774,8 @@ button {
 }
 
 .task h4 {
-    font-size: 14px;
     padding: 20px 0 20px 20px;
+    font-size: 14px;
 }
 
 .strings {
@@ -724,12 +784,14 @@ button {
     width: 90%;
     height: 40px;
 }
+
 .bottom-task {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .strings h2 {
     display: flex;
     justify-content: start;
@@ -788,9 +850,6 @@ button {
     background: #9C9C9C;
 }
 
-
-
-
 /* aside
 ============================*/
 
@@ -804,15 +863,13 @@ button {
     width: 100%;
     height: 50px; 
     background: linear-gradient(to right, #FD5A6C, #FB7858);
-    
 }
 
-.top-aside div {
+.aside-left, .aside-center, .aside-right {
     height: 100%;
     width: 50px;
     flex-grow: 1;
     margin:  0 1px;
-    background: transparent;
 }
 
 .top-aside div:nth-child(1) {
@@ -833,7 +890,6 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
 }
 
 .people {
@@ -908,7 +964,6 @@ button {
     width: 40px;
     height: 40px;
     background: url(../dist/img/main-pic/bottom/aside/top-aside/dark-chat.png) no-repeat center;
-
 }
 
 .zoom {
@@ -922,6 +977,7 @@ button {
     height: 35px;
     background: url(../dist/img/main-pic/bottom/aside/top-aside/edit.png) no-repeat center;
 }
+
 .search-aside {
     display: flex;
     width: 90%;
@@ -937,27 +993,21 @@ button {
     font-size: 10px;
     color: #C8C8C8;
     border-bottom: 1px solid #BFBFBF;
-    background-image: transparent;
 }
-
-
-
-
 
 /* footer
 ===================*/
 
 footer {
     width: 100%;
-    height: 250px;
-
 }
+
 footer h4 {
     font-size: 14px;
     text-align: center;
     margin: 25px auto;
-    
 }
+
 .link {
     display: flex;
     flex-wrap: wrap;
