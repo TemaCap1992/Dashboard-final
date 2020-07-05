@@ -1,61 +1,6 @@
-@media screen and (max-width: 991px) {
-    /* стили для больших планшетов - начало */
-    .left-side {
-        width: 50%;
-    }   
-    .right-side {
-        width: 50%;
-    }
-    .last-top {
-        justify-content: center;
-    }
-}
-    
-    @media screen and (max-width: 767px) {
-    /* стили для средних планшетов - начало */
-    .first-top {
-        flex-direction: column;
-    }
-    .left-side {
-        width: 90%;
-        justify-content: space-around;        
-    }   
-    .right-side {
-        width: 90%;
-        justify-content: space-around;    
-    }   
-    .bottom {
-        display: flex;
-        flex-direction: column;
-    }
-    .content {
-        width: 100%;
-    }
-    .aside {
-        width: 100%;
-    }
-}
-    
-@media screen and (max-width: 479px) {
-    /* стили для телефонов - начало */
-    .left-side {
-        flex-direction: column-reverse;
-        align-items: center;   
-    }   
-    .right-side {
-        flex-direction: column;
-        align-items: center;
-    }
-    .top-content {
-        display: flex;
-        flex-direction: column;
-    }
-    .bottom-content {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-    }
-}
+
+
+
 
 
 
@@ -241,7 +186,7 @@ a {
 
 .search {
     display: flex;
-    width: 40%;
+    width: 50%;
     max-height: 35px;
     padding-top: 20px;
 }
@@ -402,10 +347,10 @@ button, .button {
 
 .price h2 {
     font-size: 20px;
+    background: linear-gradient(to right, #FD5272, #FB7858);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #FA7559;
-    background: linear-gradient(to right, #FD5272, #FB7858);
 }
 
 .price h4 {
@@ -596,7 +541,7 @@ button, .button {
 
 .income h4 {
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .content-income {
@@ -606,18 +551,26 @@ button, .button {
 
 .income-pic {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .content-income .face {
-    width: 70px;
-    min-height: 275px;
+    display: flex;
+    flex-direction: column;
+    width: 70px;    
     text-align: center; 
 }
 
 .right-text {
     display: flex;
     flex-direction: column;
+}
+
+.text-income {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .text-income h4 {
@@ -661,7 +614,7 @@ button, .button {
     text-align: center;
     width: 50%;
     min-height: calc(100px + 10vw);
-    background: #ffffff;
+
 }
 
 .progress h4 {
@@ -670,10 +623,11 @@ button, .button {
 
 .progress h2 {
     font-size: 20px;
+    background: linear-gradient(to right, #708AE6, #844BB6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #844BB6;
-    background: linear-gradient(to right, #708AE6, #844BB6);
+
 }
 
 .progress h5 {
@@ -740,10 +694,10 @@ button, .button {
 .shipments h2 {
     width: 30%;
     font-size: 20px;
+    background: linear-gradient(to right, #708AE6, #844BB6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #844BB6;
-    background: linear-gradient(to right, #708AE6, #844BB6);
 }
 
 .shipments h5 {
@@ -1051,3 +1005,113 @@ footer h4 {
     background: url(../dist/img/main-pic/bottom/aside/footer/vk.png) no-repeat center;
     background-color: #F9BE87;
 }
+
+@media screen and (max-width: 991px) {
+    /* стили для больших планшетов - начало */
+    .left-side {
+        width: 50%;
+    }   
+    .right-side {
+        width: 50%;
+    }
+    .last-top {
+        justify-content: center;
+    }
+    .bottom {
+        flex-direction: column;
+    }
+    .content {
+
+        width: 95%;
+    }
+    .aside {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+    
+    @media screen and (max-width: 767px) {
+    /* стили для средних планшетов - начало */
+    .first-top {
+        flex-direction: column;
+    }
+    .left-side {
+        width: 90%;
+        justify-content: space-around;        
+    }   
+    .right-side {
+        width: 90%;
+        justify-content: space-around;    
+    }   
+    .top-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .graphs {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .right-level .line {
+        width: 70vw;
+    }
+    .line {
+        width: 50vw;
+    }
+    .feed {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .left-bottom-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .right-bottom-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .aside {
+        width: 100%;
+    }
+}
+    
+@media screen and (max-width: 479px) {
+    /* стили для телефонов - начало */
+    .left-side {
+        flex-direction: column-reverse;
+        align-items: center;   
+    }   
+    .right-side {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-bottom-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .right-bottom-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .square {
+        display: flex;
+        flex-direction: column;
+    }
+    .shipments {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .progress {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+}
+
