@@ -132,7 +132,6 @@ a {
     display: block;    
 }
 
-
 .home {
     display: flex;
     width: 100%;
@@ -212,6 +211,17 @@ a {
     display: flex;
 }
 
+.left-buttons .button {
+    border-right: 1px solid #9C9C9C;    
+}
+
+.left-buttons button {
+    border-right: 1px solid #9C9C9C;    
+}
+
+.right-buttons button {
+    border-left: 1px solid #9C9C9C;    
+}
 .search {
     display: flex;
     width: 50%;
@@ -357,10 +367,14 @@ button, .button {
 
 .last-top {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+
+.prices {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .price {
@@ -369,7 +383,7 @@ button, .button {
     justify-content: space-around;
     width: 100px;
     height: 100px;
-    margin: 15px 15px 15px 0;
+    margin: 15px;
     text-align: center;
 }
 
@@ -522,39 +536,76 @@ button, .button {
 }
 
 .feed {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 25%;
-    min-height: calc(100px + 10vw);
     background: #ffffff;
 }
 
-.feed h4 {
-    font-size: 14px;
+.feed .ring {
+    position: relative;
+    width: 150px;
+    height: 150px;
 }
 
-.feed h2 {
+.feed .ring svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.feed .ring svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+
+.feed .ring svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #cccccc;
+}
+
+.feed .ring svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);;
+    stroke: #7761BC;
+}
+
+.feed .ring .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.number h2 {
     font-size: 20px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     color: #844BB6;
-    background: linear-gradient(to right, #708AE6, #844BB6);
+}
+
+.feed h4 {
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #000000;
 }
 
 .feed h5 {
+    padding-top: 10px;
     font-size: 12px;
     color: #C8C8C8;
-}
-
-.feed-pic {
-    display: flex;
-    width: 110px;
-    height: 110px;
-    margin: 5px;
-    background: url(../dist/img/main-pic/bottom/content/circle.png);
 }
 
 /* income
@@ -832,6 +883,38 @@ button, .button {
     background: #9C9C9C;
 }
 
+input[type='radio'] {
+  position: relative;
+  height: 17px;
+  width: 17px;
+}
+
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #FD5D6B;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FD5D6B;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
 /* aside
 ============================*/
 
@@ -852,6 +935,18 @@ button, .button {
     width: 50px;
     flex-grow: 1;
     margin:  0 1px;
+}
+
+.top-aside div:hover:nth-child(1) {
+    background-color: #C33E5A;
+}
+
+.top-aside div:hover:nth-child(2) {
+    background-color: #C33E5A;
+}
+
+.top-aside div:hover:nth-child(3) {
+    background-color: #C33E5A;
 }
 
 .top-aside div:nth-child(1) {
@@ -1043,7 +1138,12 @@ footer h4 {
         width: 50%;
     }
     .last-top {
-        justify-content: center;
+        display: flex;
+    }
+    .prices {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
     }
     .bottom {
         flex-direction: column;
@@ -1070,7 +1170,16 @@ footer h4 {
     .right-side {
         width: 90%;
         justify-content: space-around;    
-    }   
+    }  
+    .right-side button {
+        border: none;
+    } 
+    .left-side button {
+        border: none;
+    }
+    .left-side .button {
+        border: none;
+    }      
     .top-content {
         display: flex;
         flex-direction: column;
